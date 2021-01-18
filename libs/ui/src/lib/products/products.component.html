@@ -1,0 +1,9 @@
+<section class="product-listings" *ngFor="let product of $products | async">
+  <div class="product-card">
+    <img [src]="product.image" />
+    <p class="product-name">{{ product.name }}</p>
+    <p class="product-description">{{ product.description }}</p>
+    <p class="product-price">{{ product.price | currency }}</p>
+    <button class="add-to-cart-button">Add to Cart</button>
+  </div>
+</section>
